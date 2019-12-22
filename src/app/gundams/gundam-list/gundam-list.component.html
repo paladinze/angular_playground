@@ -1,1 +1,19 @@
-<p>gundam-list works!</p>
+
+<div class="ui row">
+  <h2>Gundam List</h2>
+  <div class="ui button primary">Add Gundam</div>
+  <div class="ui divider"></div>
+</div>
+<div class="ui two column grid">
+  <div class="column" *ngFor="let gundam of gundams">
+    <div class="ui fluid card">
+      <div class="image">
+        <img [src]="gundam.img"/>
+      </div>
+      <div class="content">
+        <a class="header">{{ gundam.name }}</a>
+        {{ gundam.series }}
+      </div>
+    </div>
+  </div>
+</div>
